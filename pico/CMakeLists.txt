@@ -20,5 +20,9 @@ add_executable(monitor
 # Add pico_stdlib library which aggregates commonly used features
 target_link_libraries(monitor pico_stdlib)
 
+# enable usb output, disable uart output
+pico_enable_stdio_usb(monitor 1)
+pico_enable_stdio_uart(monitor 0)
+
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(monitor)
