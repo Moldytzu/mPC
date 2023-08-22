@@ -1,0 +1,1 @@
+minicom -b 115200 -D /dev/ttyACM0 -o -l -L
